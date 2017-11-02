@@ -1,0 +1,831 @@
+body, html {
+    margin: 0 auto;
+    height: 100%;
+    counter-reset: header;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-width {
+    margin: auto;
+    width: 1090px;
+    height: 100%;
+    margin-top: 100px;
+    margin-bottom: 5%;
+}
+
+.header-fixed {
+    position: fixed;
+    z-index: 7;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: white;
+}
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: space-between;
+    width: 1090px;
+    margin: auto;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.link-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 656px;
+    height: 12px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    padding-left: 0px;
+    align-content: center;
+}
+
+.link-border-bottom {
+    text-decoration: none;
+    color: black;
+}
+
+.link-border-bottom:hover {
+    border-bottom: 2px solid #e8bf5d;
+}
+
+.logo {
+    width: 168px;
+    height: 18px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: inline;
+}
+
+h1:after {
+    content: ".";
+    color: #e8bf5d;
+    letter-spacing: 1px;
+}
+
+.hello-section {
+    height: 100vh;
+    margin-top: 81px;
+    overflow: hidden;
+}
+
+.photo-lawyer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -2;
+}
+
+.background-gradient {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(to top, #000000, transparent);
+    opacity: 0.9;
+}
+
+.contact-with-advocate {
+    position: absolute;
+    bottom: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+
+.name-and-button {
+    width: 951px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+h2 {
+    margin: 0;
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 0.2em;
+
+    border-left: solid #e8bf5d;
+}
+
+.name-advocate > p {
+    font-family: "Open Sans";
+    margin: 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: #ffffff;
+    padding-left: 0.6em;
+    border-left: solid #e8bf5d;
+}
+
+.contact-button {
+    width: 180px;
+    height: 53px;
+    border: none;
+    background: none;
+    background-image: url("../img/contact-button.png");
+}
+
+/*end of header and hello-section*/
+
+.about-us {
+    height: 100vh;
+}
+
+.light {
+    background-image: url("../img/light.png");
+    background-repeat: repeat-y;
+    margin: auto;
+}
+
+.dark {
+    background-image: url("../img/dark.png");
+    background-repeat: repeat-y;
+    margin: auto;
+}
+
+.about-us-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.light-section-header {
+    width: 785px;
+    height: 107px;
+    border-left: solid #e8bf5d;
+    position: relative;
+    z-index: 5;
+}
+
+.light-section-header > h3 {
+    width: 300px;
+    height: 25px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 44.84px;
+/ letter-spacing: 1.24 px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 5;
+}
+
+.light-section-header > p {
+    width: 762px;
+    height: 51px;
+    color: #666666;
+    font-family: "Playfair Display";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30.89px;
+    letter-spacing: 0.84px;
+    margin-left: 1.2em;
+    position: relative;
+    z-index: 5;
+}
+
+.dark-section-header {
+    width: 785px;
+    height: 107px;
+    border-left: solid #e8bf5d;
+}
+
+.dark-section-header > h3 {
+    width: 400px;
+    height: 24px;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 31px;
+    font-weight: 400;
+    line-height: 44.84px;
+    /* Text style for "Practis Ar" */
+    letter-spacing: 1.24px;
+    margin-top: 0px;
+    position: relative;
+    z-index: 5;
+}
+
+.dark-section-header > p {
+    width: 762px;
+    height: 51px;
+    color: #b9b9b9;
+    font-family: "Playfair Display";
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 30.89px;
+    letter-spacing: 0.84px;
+    margin-left: 1.2em;
+    position: relative;
+    z-index: 5;
+}
+
+.counter::before {
+    content: counter(chapter) counter(header);
+    counter-increment: header;
+    opacity: 0.5;
+    position: absolute;
+    width: 178px;
+    height: 107px;
+    color: #f3f3f3;
+    font-family: "Open Sans";
+    font-size: 195px;
+    letter-spacing: 0.56px;
+    margin-top: -0.35em;
+    z-index: 1;
+}
+
+.history-expertise {
+    display: flex;;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history {
+    width: 560px;
+}
+
+.expertise {
+    width: 488px;
+    margin-top: 0px;
+}
+
+h4 {
+    width: 75px;
+    height: 20px;
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.84px;
+}
+
+dl {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+dt {
+    margin: 0;
+    width: 70px;
+    height: 15px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 0px;
+    /* Text style for "2, 016 -" */
+    letter-spacing: 0.84px;
+}
+
+dd {
+    width: 75%;
+    font-family: "Open Sans", "Ariel", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 5%;
+}
+
+.expertise > p {
+    width: 486px;
+    height: 169px;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+}
+
+/*end of about-us section*/
+
+.practis-area {
+    heoght: 100vh;
+}
+
+.practice-area ul {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.practis-area-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.practice-area ul {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.practice-area ul > li {
+
+    width: 45%;
+    height: 50%;
+}
+
+li {
+    width: 359px;
+    height: 138px;
+}
+
+li > p {
+    margin-left: 85px;
+    font-family: "Open Sans", "Ariel", sans-serif;
+    font-size: 14px;
+
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+dl, dt {
+    margin-bottom: 45px;
+}
+
+.practis-area {
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.marker-hands:before {
+    content: url("../img/marker-1.png");
+}
+
+.marker-key:before {
+    content: url("../img/marker-2.png");
+}
+
+.marker-display:before {
+    content: url("../img/marker-3.png");
+}
+
+.marker-home:before {
+    content: url("../img/marker-4.png");
+    width: 64px;
+    height: 64px;
+}
+
+.practis-list-container > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.practis-list-container > ul > li {
+    width: 446px;
+    margin: auto;
+    color: white;
+    margin-top: 5%;
+}
+
+.practis-list-container > ul > li > h4 {
+    width: 100%;
+    height: 17px;
+    color: #ffffff;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 31px;
+    /* Text style for "Private Cl" */
+    letter-spacing: 0.84px;
+}
+
+.practis-list-container > ul > li > p {
+    width: 357px;
+    height: 89px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.56px;
+    line-height: 25px;;
+    margin-top: 3em;
+}
+
+/*end of practis-area*/
+
+.meet-our-attorney > header {
+    margin-bottom: 10em;
+}
+
+.lawyers-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.our-attorney-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100vh;
+}
+
+.our-lawyer {
+    width: 240px;
+    height: 375px;
+    margin: 5px;
+}
+
+.lawyer-size {
+    width: 240px;
+}
+
+figcaption > h4 {
+    color: #111111;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    line-height: 31px;
+    width: 240px;
+    margin-left: 0px;
+}
+
+figcaption > p {
+    width: 240px;
+    height: 44px;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400
+}
+
+/*end of our-lawyers*/
+
+.our-clients {
+    height: 100vh;
+    background-image: url("../img/worker.jpg");
+}
+
+.our-clients-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.img-client-size {
+    position: relative;
+    width: 370px;
+    height: 302px;
+    margin-left: 0;
+}
+
+.client-cite {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 308px;
+    margin-bottom: 10%;
+}
+
+cite {
+    width: 600px;
+    height: 138px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    /* Text style for "Lorem ipsu" */
+    letter-spacing: 0.56px;
+    font-style: normal;
+}
+
+cite > h4 {
+    margin-left: 0px;
+    width: 200px;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    font-style: normal;
+    color: white;
+}
+
+cite > p {
+    width: 200px;
+    height: 44px;
+    color: #ffffff;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*end of our clients*/
+
+.publications-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+
+.publications {
+    margin-top: 10%;
+}
+
+.publications > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 635px;
+    padding-left: 0px;
+}
+
+.publications > ul > li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 635px;
+    padding-left: 0px;
+
+}
+
+.img-publications-size {
+    width: 325px;
+}
+
+article > h4 {
+    width: 100%;
+    margin-left: 0px;
+    font-family: "Playfair Display";
+    font-size: 21px;
+    font-weight: 400;
+    letter-spacing: 0.84px;
+    line-height: 31px;
+}
+
+.author-and-date {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    color: #666666;
+    font-style: italic;
+    letter-spacing: 0.64px;
+    line-height: 24px;
+    width: 325px;
+}
+
+time {
+    margin-top: 1.1em;
+}
+
+.publication-text {
+    width: 325px;
+    height: 135px;
+    color: #666666;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    letter-spacing: 0.56px;
+    font-style: normal;
+}
+
+.coments-and-share {
+    width: 325px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.coments-and-share > p {
+    text-decoration: none;
+    width: 130px;
+    height: 16px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 31px;
+    margin-top: 14%;
+}
+
+.marker-comment:before {
+    content: url("../img/coment.png");
+    width: 20px;
+    height: 20px;
+}
+
+.marker-share:before {
+    content: url("../img/share.png");
+    width: 20px;
+    height: 20px;
+}
+
+.publications-tite {
+    border-bottom: solid #e8bf5d;
+}
+
+/*end of publications*/
+
+.faq {
+    height: 100vh;
+    background-color: black;
+}
+
+.faq-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 80vh;
+}
+
+.yellow-block {
+    width: 502px;
+    height: 284px;
+    border-radius: 3px;
+    background-color: #e8bf5d;
+
+}
+
+.yellow-block > p {
+    width: 406px;
+    box-shadow: 0 12px 40px rgba(216, 178, 87, 0.32);
+    height: 169px;
+    color: #111111;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 31px;
+    /* Text style for "Long estab" */
+    letter-spacing: 0.56px;
+    padding: 10%;
+}
+
+/*end of faq*/
+
+.contact {
+    height: 100vh;
+}
+
+.contact-flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.form-and-map {
+    width: 872px;
+    height: 493px;
+    box-shadow: 0 12px 40px rgba(104, 86, 42, 0.1);
+    border-radius: 3px;
+    background-color: #ffffff;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form > ul {
+    height: 346px;
+    margin-top: 25%
+}
+
+form > ul > li {
+    height: 50px;
+}
+
+input, textarea {
+    border: none;
+    border-bottom: 1px solid #333333;
+    width: 353px;
+    outline: none;
+}
+
+.text-input {
+    width: 100%;
+    height: 13px;
+    color: #b9b9b9;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: italic;
+    line-height: 31px;
+    /* Text style for "Enter your" */
+    letter-spacing: 0.56px;
+}
+
+textarea {
+    height: 100px;
+    color: #b9b9b9;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-style: italic;
+    line-height: 31px;
+    /* Text style for "Enter your" */
+    letter-spacing: 0.56px;
+    resize: none;
+}
+
+.form-send-message {
+    background: none;
+    border: none;
+    background-image: url("../img/contact-button.png");
+    width: 180px;
+    height: 53px;
+    margin-top: 5em;
+    margin-left: 5em;
+}
+
+.map {
+    margin-right: 5em;
+    margin-top: 4.5em;
+}
+
+.map-size {
+    width: 300px;
+    height: 350px;
+}
+
+/*end of form*/
+
+footer {
+    height: 100px;
+    background-color: black;
+    margin-top: 100px;
+
+}
+
+.main-footer {
+    color: white;
+    width: 1090px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+.copy {
+    font-family: Lato;
+    font-weight: 400;
+    /* Text style for "Symu.co" */
+    color: #ffffff;
+}
+
+.copy:before {
+    content: "Copyright © ";
+    width: 156px;
+    height: 17px;
+    color: #b5b5b5;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 45px;
+}
